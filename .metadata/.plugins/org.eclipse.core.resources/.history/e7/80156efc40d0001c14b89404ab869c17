@@ -1,0 +1,10 @@
+package com.chainsys.Thread;
+
+public class CurrentThreadDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

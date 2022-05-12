@@ -1,0 +1,50 @@
+package jdbc.lesson;
+
+import java.sql.*;
+
+public class RSMD {
+	public static void main(String args[]) {
+		//resultSetMetaData();
+		DatabaseMetaData();
+	}
+	
+	
+	//find total column,indivdual name and colume data type 
+	/*public static void resultSetMetaData()
+	{
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "DEEPA");
+
+			PreparedStatement ps = con.prepareStatement("select * from Dog2");
+			ResultSet rs = ps.executeQuery();
+			ResultSetMetaData rsmd = rs.getMetaData();
+
+			System.out.println("Total columns: " + rsmd.getColumnCount());
+			System.out.println("Column Name of 1st column: " + rsmd.getColumnName(2));
+			System.out.println("Column Type Name of 1st column: " + rsmd.getColumnTypeName(2));
+
+			con.close();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	*/
+	public static void DatabaseMetaData()
+	{
+	try{  
+		Class.forName("oracle.jdbc.driver.OracleDriver");  
+		  
+		Connection con=DriverManager.getConnection(  
+		"jdbc:oracle:thin:@localhost:1521:xe","system","oracle");  
+		DatabaseMetaData dbmd=con.getMetaData();  
+		  
+		System.out.println("Driver Name: "+dbmd.getDriverName());  
+		System.out.println("Driver Version: "+dbmd.getDriverVersion());  
+		System.out.println("UserName: "+dbmd.getUserName());  
+		System.out.println("Database Product Name: "+dbmd.getDatabaseProductName());  
+		System.out.println("Database Product Version: "+dbmd.getDatabaseProductVersion());  
+		  
+		con.close();  
+		}catch(Exception e){ System.out.println(e);}  
+}
+}

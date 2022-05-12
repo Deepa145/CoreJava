@@ -1,0 +1,10 @@
+package com.chainsys.firstlesson;
+
+public class Diamandpattern {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,5 @@
+package jdbc.lesson;
+
+public class InsertUpdateRecord {
+
+}
