@@ -108,7 +108,7 @@ public class FileDemoA {
 		  public static void modifyFile()throws IOException
 	        {
 	            String source = "D:\\FileOperatiggon.txt";
-	            Scanner sc = new Scanner(new File(source));
+	            Scanner sc = new Scanner (source);
 	            StringBuffer buffer1 = new StringBuffer();
 	            while (sc.hasNextLine()) {
 	               buffer1.append(sc.nextLine()+System.lineSeparator());

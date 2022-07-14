@@ -1,0 +1,54 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Variables</title>
+	</head>
+	<body>
+	<script type="text/javascript">
+	  'use strict'
+	    var first = 'west minister';
+	    console.log(`first: ${first}`);
+	    let age = 300;
+	    console.log(`Age: ${age}`);
+	    let cool = true;
+	    console.log(`cool: ${cool}`);
+	    
+	    /* const Dog = 'Golden Retriever'; // avoid starting variables with Upper case 
+	    console.log(`Dog: ${Dog}`);
+	    */
+	    
+	    const dog = 'Golden Retriever'
+	        console.log(`Dog: ${dog}`);
+	    
+	    // use strict declared at the beginning of the module will throw the following error
+	   let cat = 'black'; 
+	    // Uncaught ReferenceError: cat is not defined
+	    console.log(`cat:${cat}`);
+	    
+	 // variables can have name with lowercase / _(under score) / $
+	    let _manager = 'John';
+	    let $city = 'Chennai';
+	    let $_$ = 400;
+	    console.log(`Manager: ${_manager}`);
+	    console.log(`City: ${$city}`);
+	    console.log(`$_$: ${$_$}`);
+	    
+	   
+	    let _ = 1; // these work , but don't use these - reserved for lib lodash
+	    let $ = 2; // these work , but don't use these - reserved for jquery
+	    console.log(`_: ${_}`);
+	    console.log(`$: ${$}`);
+	    
+	    /* let #_$ = 400; //==> Invalid character
+	    console.log(`#_$: ${#_$}`); */
+	    
+	 // snake case!!
+	    const this_is_snake_case = 'cool';
+	    console.log(`snake_case: ${this_is_snake_case}`);
+	    
+	/*  // kebab case - not allowed in variables
+	    const this-is-kebab-case = 'hot'; */
+	    </script>
+	</body>
+	</html>

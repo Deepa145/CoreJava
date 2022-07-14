@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS Lessons</title>
+</head>
+<body>
+	<script type="text/javascript" language="javascript">
+		function say(text) {
+			console.log(text);
+		}
+		say('The page is loading!');
+	</script>
+	<h1>Hello JS</h1>
+	<noscript>
+		JavaScript is turned off.
+		<script type='text/javascript'>
+			console.log('Inside no script...');
+			alert('Hello NOSCRIPT');
+		</script>
+	</noscript>
+	<input type="button" value="Click me!"
+		onclick="say('Thanks for clicking!')" />
+	<!-- Script element can be defined in the head as well as body  -->
+	<script type='text/javascript'>
+		console.log('Hi...');
+		/* alert('Hello'); */
+	</script>
+	<div>
+		Run the java script tags at the end before the closing "body" tag else
+		the dom returns a <b>null</b> object. Because when the first script is
+		loaded the paragraph element is not yet loaded in the DOM tree.
+	</div>
+	<script>
+		console.log('Before');
+		const paragraphArray = document.querySelectorAll('p');
+		console.log(paragraphArray); // pragraphArray represents array of paragraphs
+	</script>
+
+	<p>Hi there, how are you - This the first Paragraph</p>
+	<p>This is the Second Paragraph in PageA</p>
+	<script>
+		console.log('After');
+		const paragraphArray1 = document.querySelector('p');
+		console.log(paragraphArray1); // pragraphArray represents array of paragraphs
+	</script>
+	<div id='feedback' onClick='greetings()'>Users without Javascript
+		will see this.</div>
+
+	<p>
+		<button onClick='goodbye()'>Submit</button>
+	</p>
+	<script type="text/javascript">
+		// Hello world will replaces "users without javascript"...text .
+		document.getElementById('feedback').innerHTML = 'Hello World!';
+		function goodbye() {
+			document.getElementById('feedback').innerHTML = 'Goodbye World!';
+            // when button is clicked goodbye function is called
+			// "Greetings World!" will replaced Existing text.
+		}
+		function greetings() {
+			document.getElementById('feedback').innerHTML = 'Greetings All!!!';
+			// when div with id feedback is clicked this function is called.
+			// "Greetings All!!!" will replaced Existing text.
+		}
+	</script>
+</body>
+</html>

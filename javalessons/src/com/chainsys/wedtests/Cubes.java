@@ -1,5 +1,7 @@
 package com.chainsys.wedtests;
+
 import java.util.Scanner;
+
 public class Cubes {
 
 	public static void main(String[] args) {
@@ -9,9 +11,10 @@ public class Cubes {
 public static void armStrongNumber()
 {
 int n,a,k,c=0;
-java.util.Scanner s1=new java.util.Scanner(System.in);
+Scanner s1=new Scanner(System.in);
 System.out.println("Enter a Number");
 n=s1.nextInt();
+s1.close();
 k=n;
 while(n>0)
 {

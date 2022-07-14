@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Keywords</title>
+</head>
+<body>
+<div id='max'></div>
+	<p></p>
+	<div id='min'></div>
+	<script type="text/javascript">
+	// number is a datatype	
+	document.getElementById('max').innerHTML = `Max:${Number.MAX_VALUE}`;
+	document.getElementById('min').innerHTML = `Min:${Number.MIN_VALUE}`;
+	
+	const x = 100;
+	let s1 = 'Hello';
+	let result = x / s1;
+	document.writeln(`<p>result ${result}`); // NaN - not a number
+	
+	document.writeln('</p>result === NaN ');
+	document.writeln(result === NaN);
+	
+	document.writeln(`<p>isNaN(result)  ${isNaN(result)}</p>`);
+	
+	const y = 0;
+	const z = x / y;
+	document.writeln(`<p>z = ${z}</p>`); // Infinity
+	
+	s1 = null;
+	document.writeln(`<p>s1= ${s1}</p>`);
+	document.writeln(`<p>s1= ${null}</p>`);
+	
+	function checkNull_Undefined(sayThis) {
+		if (sayThis === undefined) {
+			// Check to see if sayThis is undefined.
+			// If it was, then give it a default value
+			sayThis = 'Value is Undefined'; 
+		} else if (sayThis === null) {
+			sayThis = 'The Value is Null';
+		} // End check
+		document.writeln(`${sayThis}</p>`); // Toss up the alert.
+	}
+	checkNull_Undefined(s1);
+	let s2; //undefined
+	checkNull_Undefined(s2);
+	s2="paani poori";
+	checkNull_Undefined(s2);
+	</script>
+</body>
+</html>

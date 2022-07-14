@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <script src="../scripts/functions.js"></script>
+</head>
+
+<body>
+    <div id="result"></div>
+    <p><label for="firsttxt">X :</label> <input id="firsttxt" type="text" placeholder="enter a number" /></p>
+    <p><label for="secondtxt">X :</label> <input id="secondtxt" type="text" placeholder="enter a number" /></p>
+    <div> <input type="button" value="+" onclick="sum()"></div>
+    <div>
+        <input type="button" value="Addition"
+            onclick="addition(document.getElementById('firsttxt').value,document.getElementById('secondtxt').value)" />
+    </div>
+    <script>
+        // add();
+        // addition(200,300);
+        //printtohunderd();
+        // printinreverse();
+        // printevennumbers();
+        //   const maxvalue = Math.max(10, 12)
+        // console.log(maxvalue)
+        // const minvalue = Math.min(10, 12)
+        // console.log(minvalue)
+        //addnumbers(...[1, 9, 3, 4, 5]);
+
+        // let greetings = yell('Venkat') // HEY VENKAT
+        // console.log(greetings)
+        // greetings = yell() // HEY SILLY GOOSE
+        // console.log(greetings)
+
+        // calculateBill(100); // 100,0.13,0.15
+        // calculateBill(100, 0.66);
+        // calculateBill(100, undefined, 0.66); //100,0.13,0.66
+        //hoisting
+        // const doc = doctorize('venkat')
+        // console.log(doc)
+        // function doctorize(firstName) {
+        //     return `Dr. ${firstName}`
+        // }
+        //anaon functions
+        // (function (firstName) {
+        //     return `Dr. ${firstName}`;
+        // }) ('Venkat');
+        // function expression
+        // const doctorize = function (firstName) {
+        //     return `Dr. ${firstName}`
+        // }
+        // const doc = doctorize('venkat')
+        // console.log(doc)
+
+        /* Arrow Functions */
+        // const inchToCM = inches => {
+        //     console.log(inches);
+        //     return inches * 2.54;
+        // };
+
+        // const resultcm = inchToCM(10);
+        // console.log(resultcm);
+
+        // const funcA = () => {
+        //     console.log('Hi');
+        // };
+        // funcA();
+        // const adds = (a, b = 3) => a + b;
+        // const inTocm = (inches) => inches * 2.54;
+
+        // console.log(add(100));
+        // console.log(inTocm(25));
+
+        // const makeAPerson = (first, last) => ({ name: `${first} ${last}`, age: 0 });
+        // const person = makeAPerson('venkat', 'krishnan');
+        // console.log(person);
+
+        const employee = {
+            name: 'Venkat Krishnan',
+            // method
+            sayHi: function () {
+                console.log(`Hi!!! ${this.name}`);
+                return `Hi ${this.name}`;
+            },
+            print: () => {
+                console.log('Hello employee');
+            },
+            yellHi() {
+                console.log(`HI ${this.name.toUpperCase()}`);
+            },
+        };
+        employee.sayHi();
+        employee.print();
+        employee.yellHi();
+    </script>
+</body>
+
+</html>

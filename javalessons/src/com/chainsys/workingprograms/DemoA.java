@@ -1,9 +1,8 @@
 package com.chainsys.workingprograms;
-
 import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class DemoA {

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Forms</title>
+</head>
+<body>
+	<form name="myForm" action="PageA.html">
+		<p>
+			Name: <input placeholder="Enter name" name="name" type="text"
+				size="30">
+		</p>
+		<p>
+			Email: <input placeholder="Enter email address" name="email"
+				type="email" size="30">
+		</p>
+		<p>
+			Age: <input placeholder="Enter age" name="age" type="number"
+				value="0" size="3">
+		</p>
+		<p>
+			Job: <select title="joblist" name="job">
+				<option>--- select one ---
+				<option value="student">Student</option>
+				<option value="businessperson">Business Person</option>
+			</select>
+		</p>
+		<p>
+			<input type="submit" value="Send!"
+				onClick="checkForm(); return false;">
+		</p>
+		<p>
+			<button type="button" onClick="openWindow()">New Window</button>
+		</p>
+		<p>
+			<button type="button" onClick="window.print()">Print</button>
+		</p>
+		<p>
+			<button type="button" onClick="createCookie()">Working with Cookies</button>
+		</p>
+	</form>
+	<script type="text/javascript">
+	function checkForm()
+	{
+		var formName = document.myForm.name;
+		var formEmail = document.myForm.email;
+		var formAge = document.myForm.age;
+		var formJob = document.myForm.job;
+		console.log('Name' + formName.value);
+		console.log('Email' + formEmail.value);
+		console.log('Age' + formAge.value);
+		console.log('Job' + formJob.value);
+		if (formName.value.indexOf(" ") == -1) {
+			alert("Please enter your full name.");
+			formName.focus();
+			return;
+		} 
+		if (formEmail.value.indexOf("@") == -1 || formEmail.value.indexOf(".") == -1) {
+			alert("Please enter a valid e-mail address.");
+			formEmail.focus();
+			return;
+		}
+		let formAgeValue = parseInt(formAge.value);
+		if (formAgeValue < 8 || formAgeValue > 58) {
+			alert("Age must be between 8 and 58!");
+			formAge.focus();
+			return;
+		}
+		if (formJob.selectedIndex == 0) {
+			alert("Please select your job from the list."); formJob.focus();
+			return;
+		}
+		document.myForm.submit();
+	}
+	function openWindow()
+	{
+		myWindow = window.open('PageA.html' , 'PageA' , 'height = 300,width=400');
+	}
+	function createCookie()
+	{
+		// cookies can not be set if the page is not working in a web server.
+		// http://localhost:8080/HTMLLessons/js_lessons/PageK.html will work.
+		d1 = new Date();
+		d1.setTime(d1.getTime() + (1 * 24 * 60 * 60 * 1000));
+		document.writeln("Date is:" + d1.toGMTString());
+
+		document.cookie = "key1=Apple; expires=" + d1.toGMTString()+";";
+		document.writeln("<p>cookies: " + document.cookie);
+	}
+	</script>
+</body>
+</html>

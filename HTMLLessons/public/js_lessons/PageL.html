@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DataTypes</title>
+</head>
+<body>
+	<!-- <script defer src="../scripts/strings.js"></script> -->
+	<!-- <script defer src="../scripts/numbers.js"></script> -->
+	<!-- <script defer src="../scripts/boolean.js"></script> -->
+	<script src="../scripts/objects.js"></script>
+</head>
+<body>
+	<div id="div1">Welcome</div>
+	<div name="div2"></div>
+	<script>
+		console.log("date= " + d);
+		f1();
+
+		var len;
+		if (book) {
+			if (book['sub-title']) {
+				len = book['sub-title'].length;
+				console.log(len);
+			} else
+				console.log("book.subtitle undefined: property doesn't exist");
+		} else
+			console.log("book is null");
+		console.log(book.author);
+		delete book.author; // The book object now has no author property.
+		console.log(book.author);
+
+		console.log(book["main title"]);
+		delete book["main title"]; // Now it doesn't have "main title", either.
+		console.log(book["main title"]); // undefined
+
+		let o6 = {
+			x : 1
+		}; // o has own property x and inherits property toString
+		console.log(o6.x);
+		var deleteResult = delete o6.x; //Delete x, and return true
+		console.log(deleteResult); // undefined
+		console.log(o6.toString);
+		deleteResult = delete o6.x;
+		console.log("DeletingFiles" + deleteResult); //This delete operation does nothing but returns true.
+		
+		delete o.toString; // Do nothing (toString isn't an own property), return true
+		//own properties alone can be deleted.
+        delete 1; // Nonsense, but evaluates to true
+		
+        delete Object.prototype;
+        var v1 = 1; // Declare a global variable
+        console.log(this.v1);
+        delete this.v1; // Can't delete this property, Can not delete global properties of this.
+        console.log(this.v1);
+        function f2() {
+            console.log('Hi Class');
+            
+        } // Declare a global function
+        f2();
+        delete this.f2; // Can't delete this property either
+        f2();
+	</script>
+</body>
+</html>

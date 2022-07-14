@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Input</title>
+</head>
+<body>
+	<input placeholder="enter your name here" id='userInput' size=60 />
+	<button onClick='userSubmit()'>Submit</button>
+	<br>
+	<p>
+		<input placeholder="enter your city here" id='city'
+			onKeyUp="userSubmitA('city')" />
+	</p>
+	<p>
+	<div id='result'></div>
+	<script type='text/javascript'>
+		document.writeln('<p>Hello</p>');
+
+		function userSubmit() {
+			const ui = document.getElementById('userInput').value;
+			document.getElementById('result').innerHTML = `You typed: ${ui}`;
+		}
+		function userSubmitA(v1) {
+			const ui = document.getElementById(v1).value;
+			document.getElementById('result').innerHTML = `You typed: ${ui}`;
+		}
+	</script>
+</body>
+</html>

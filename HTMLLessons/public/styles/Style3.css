@@ -1,0 +1,43 @@
+@charset "ISO-8859-1";
+
+a:link{
+    font-size: 35px;
+    text-decoration: none;
+    color:goldenrod;
+}
+a:visited
+{
+    color:green;
+}
+a:hover
+{
+
+    color: blue;
+}
+a:active
+{
+    color:red;
+}
+.dropdown-content a {
+	display: none;/* display none is hidder  */
+}
+/* select first leter of the h1 tag ::first-letter */
+h1::first-letter{
+
+    font-size: 70px;
+    font-style: bold;
+    color:brown
+}
+/* using before - insert the content before heading*/
+h1::before
+{
+    content: "This is ";
+    color:blue;
+}
+/* using after - insert the content after heading*/
+h1::after
+{
+    content: "my page";
+    color:green;
+    font-size: 50px;
+}

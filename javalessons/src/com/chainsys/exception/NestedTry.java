@@ -1,5 +1,7 @@
 package com.chainsys.exception;
+
 import java.util.Scanner;
+
 public class NestedTry {
 
 	static String[] data;
@@ -8,7 +10,7 @@ public class NestedTry {
 int num=0;
 int numValue=0;
 data=new String[2];
-java.util.Scanner sc=null;
+Scanner sc=null;
 try
 {
 sc=new Scanner(System.in);	

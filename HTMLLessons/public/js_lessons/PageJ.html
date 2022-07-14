@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hiding and Displaying Elements</title>
+</head>
+<body>
+<div id="myDiv" style="display: none;"> 
+		This element isn't displayed on the page! 
+	</div>
+	<!-- Calling a java script function from an anchor(link) -->
+	<a href="javascript:hide('myDiv');">Hide it!</a>
+	<p><a href="javascript:show('myDiv');">Show it!</a> </p>
+	<p><button onClick='hide("myDiv")'>Hide me</button></p>
+	<p><button onClick='show("myDiv")'>show me</button></p>
+<script type="text/javascript">
+function hide(elementID) {
+	var myElement = document.getElementById(elementID);
+	if (myElement) myElement.style.display = "none";
+}
+function show(elementID) {
+	var myElement = document.getElementById(elementID);
+	if (myElement) myElement.style.display = "block";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+@charset "ISO-8859-1";
+div{
+    text-align: right;
+}
+p{
+    background-color:blue;
+    color:white;
+    font-size:25px;
+    text-align:center;
+}
+
+div p{
+    display:inline;
+    background-color:green;
+    color:white;
+    font-size:25px;
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+.box {
+    width: 200px;
+    height: 200px;
+    background-color:olivedrab;
+    position:relative;
+    animation-name:anim; /* this is defined below @keyfram anim*/
+    animation-duration:4s;   /*set animation duration in seconds */
+}
+/* Keyframes are the important frames which contain information of a 
+    start/end point of an action. 
+*/
+/*
+    A keyframe tells you about two things :
+      first, it tells you what the action of your frame is at a certain point of time; 
+      second, it tells you what time that action occurs. 
+*/
+@keyframes anim {
+    0%{
+        left:0;
+        top:0;
+        background-color:aqua;
+    }
+   
+      25%{
+        left:500px;
+        top:0;
+        background-color:green;
+    }
+    50%{
+        left:500px;
+        top:500px;
+        background-color:greenyellow;
+    }
+    75%{
+        left:0px;
+        top:500px;
+        background-color:blue;
+    }
+     100%{
+        left: 0;
+        top:0;
+        background-color: aqua;
+    }
+}
+
+.aquared{
+    width:500px;
+    height:500px;
+    border:5px solid red;
+    color: aquamarine;
+    background-image: url(../images/Books.jpg);
+    margin:100px auto;
+}
+#div1{
+    width:500px;
+    height:500px;
+    border:5px solid red;
+    color: aquamarine;
+    background-image: url(../images/Books.jpg);
+    margin:100px auto;
+    background-size: 200px;
+}
+/* background no repeat */
+#div2{
+    width:500px;
+    height:500px;
+    border:5px solid red;
+    color: aquamarine;
+    background-image: url(../images/Books.jpg);
+    margin:100px auto;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    /* background-position: right 50px bottom 50px; */
+    /*background-position: center;*/
+    background-position: 10% 50%; 
+}
+

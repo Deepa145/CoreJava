@@ -1,0 +1,68 @@
+@charset "ISO-8859-1";
+/* selecting based on html tag */
+
+h1{
+    background-color: brown;
+}
+h2{
+    background-color:green;
+    color:white;
+}
+
+h3{
+    background-color:blue;
+}
+/* Grouping of elements */
+h1,h3{
+	color: white;
+}
+/*
+In the below example :
+    any <li> tag that is inside <ul> tag, will make it red .
+    Here, the <li> tag will be made green only in the context of <ul> tag.
+*/
+/* ul li
+{
+    color:red;
+} */
+/* selecting parent child */
+ul>li
+{
+    color:blue;
+}
+li{
+    color:green;
+}
+
+/* selecting class element */
+.item{
+ color:pink;
+}
+
+/* selecting by id */
+#list-item
+{
+    color:aqua;
+}
+section p
+{
+    color:red;
+}
+
+section > p
+{
+    color:orange;
+}
+/* Adjacent sibling + select all immediate element */
+/* Selects immediately following sibling of specified element */
+/* h1 + p
+{
+    color:yellow;
+    background-color: blue;
+} */
+/* Applies to all paragraph siblings are h1 */
+h1 ~ p
+{
+    color:yellow;
+    background-color: blue;
+}

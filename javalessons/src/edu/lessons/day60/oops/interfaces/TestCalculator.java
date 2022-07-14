@@ -13,7 +13,7 @@ public class TestCalculator {
 	   }
 	
 public static void testA()
-{
+{}
 public static void testMaker()
 {
 Calculator firstCalculator=new Calculator();

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <div>
+    <form>
+        <div>
+            <label for='year'> Years of Experience : <input name='year'
+                id='year' type='number' step=0.05 maxlength=3 min=5 max=50 value=35>
+            </label>
+        </div>
+        <div>
+            <label for='age'> Age Range <input name='age' id='age'
+                type='range' step=1 maxlength=3 min=22 max=30 value=33>
+            </label>
+        </div>
+        <div>
+            <label for='phone'> Phone Number <input name='phone'
+                id='phone' type='tel' Required pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'
+                placeholder='123-456-7890'>
+            </label>
+        </div>
+        <div>
+            <input name='course' id='course' type='checkbox' checked=true
+                required value='computer science'> <input name='course'
+                id='course' type='checkbox' required value='english'> <input
+                name='course' id='course' type='checkbox' required value='maths'>
+        </div>
+        <div>
+            <label for='secret'> hidden content : <input type='hidden'
+                name='secret' value='passwordA'>
+            </label>
+        </div>
+        <div>
+            <label for='url'> URL: <input type='url' name='url'
+                value='www.google.com'>
+            </label>
+        </div>
+        <div>
+            <label for='listOfFruits'> <select name='listOfFruits'
+                title='Select a fruit'>
+                    <option selected>Select of fruit</option>
+                    <option>Apple</option>
+                    <option>Banana</option>
+                    <option>Cherry</option>
+                    <optgroup label="Bananas">
+                        <option>Red Banana</option>
+                        <option>Green Banana</option>
+                        <option>Yellow Banana</option>
+                    </optgroup>
+                    <option>DragonFruit</option>
+            </select>
+            </label>
+        </div>
+        <div>
+        <lable for='comments'>
+        <textarea name='comments' cols=50 rows=5>
+        </textarea>
+        </lable>
+        </div>
+        <div>
+        <input type='submit' value='Click me!'>
+        <input type='reset' value='reset'>
+        <input type='image' alt='close' name='close' src='../images/close.jpg' width=60 height=60>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

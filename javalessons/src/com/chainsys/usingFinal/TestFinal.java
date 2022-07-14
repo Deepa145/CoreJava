@@ -3,7 +3,8 @@ package com.chainsys.usingFinal;
 public class TestFinal {
 	public static void main(String[] args)
 	{
-		Phone.makeACall();
+		Phone phone = new Phone();
+		phone.makeACall();
 	}
 
 }

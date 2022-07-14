@@ -1,9 +1,9 @@
 package com.chainsys.exception;
 
 public class ABC {
-public static void M1()
-public static void M2()
-public static void M3()
+public static void M1(){}
+public static void M2() {}
+public static void M3(){}
 	{
 	try
 	{

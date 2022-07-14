@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cricketers</title>
+<style>
+.green {
+	background-color: green
+}
+
+li.yellow {
+	background-color: yellow;
+}
+</style>
+</head>
+<body>
+	<div id="div1">
+		<ol>
+			<li>Rahul</li>
+		</ol>
+		<ul>
+			<li>Dhoni</li>
+			<li>Virat</li>
+			<li class="green">Sachin</li>
+			<li>Pandiya</li>
+		</ul>
+	</div>
+	<div id="div2">Hello Selectors</div>
+	<input type='text' id='fname' placeholder='enter firt name' onchange="myfunction()">
+	<!-- <script>
+		// querySelector returns the first elements(returns only one element)
+		var element1 = document.querySelector("li");
+		console.log(element1);
+		// querySelectorAll returns all li elements 
+		var element2 = document.querySelectorAll("li");
+		console.log(element2);
+		var element3 = document.querySelector("ol > li");
+		console.log(element3);
+		var element4 = document.querySelector("div");// byTagName
+		console.log(element4);
+		var element5 = document.querySelectorAll("div");
+		console.dir(element5);
+		var element6 = document.querySelector("#div2"); // byId
+		console.log(element6);
+		element6.style.color = "purple";
+		var element7 = document.querySelector(".green"); // bycssClass
+		console.log(element7);
+	</script> -->
+	<script type="text/javascript">
+		const arr = [ 1, 2, 3, 4, 5, 6 ];
+		console.log(arr);
+		// JSON to STRING
+		const strArr = JSON.stringify(arr);
+		console.log(strArr);
+		const myObj = {
+			firstname : 'Deepa',
+			lastname : 'Ravi'
+		};
+		console.log(myObj);
+		const strjson = JSON.stringify(myObj);
+		console.log(strjson);
+		//json parse; String to JSON
+		const arr1 = JSON.parse(strjson);
+		console.log(arr1);
+		var javastudentlist = {
+			"studentlist" : [ {
+				"name" : "Ajith",
+				"age" : "22"
+			}, {
+				"name" : "Vijay",
+				"age" : "22"
+			}, {
+				"name" : "Karthi",
+				"age" : "22"
+			} ],
+			"Facultylist" : [ {
+				"name" : "Gowtham",
+				"age" : "42"
+			}, {
+				"name" : "Saravanan",
+				"age" : "45"
+			}, {
+				"name" : "Karthick",
+				"age" : "47"
+			} ]
+		};
+		console.log(javastudentlist);
+		function myfunction()
+		{
+			var textElement= document.getElementById("fname");
+			console.log("text Changed " + textElement.value);			
+		}
+	</script>
+</body>
+</html>

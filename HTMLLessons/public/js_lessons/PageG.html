@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Variable Scope</title>
+</head>
+<body>
+<script type="text/javascript">
+/* Scoping:
+-   var : function scoped (only available inside parent functions)
+-   let and const : block scoped (available inside a block denoted by { } )
+*/
+var global = 'this is global';
+ function test(){
+     console.log("inside test"+ global );
+ }
+ console.log("After test "+ global );
+ test();
+function scopeFunction() {
+	alsoGlobal = 'This is also global!'; // no var - so global
+	var notGlobal = 'This is private to scopeFunction!';
+	// nested function 
+	function subFunction() {
+		// We can still access notGlobal in this child function.
+		console.log(`Inside subFunction: ${notGlobal}`); 
+		stillGlobal = 'No var keyword so this is global!';
+		var isPrivate = 'This is private to subFunction!';
+		console.log('inside subFunction' + isPrivate);
+	}
+		//console.log(stillGlobal); // This is an error since we haven't executed subfunction
+		subFunction(); // execute subfunction() inside scopeFunction()
+		//console.log(stillGlobal); // This will output 'No var keyword so this is global!'
+		//console.log(isPrivate); // This generate an error since isPrivate is private to subfunction().
+		//console.log(global); // outputs: 'this is global'
+		//console.log(notGlobal);
+	}
+/* console.log(alsoGlobal); //Error
+console.log(stillGlobal); //Error
+scopeFunction();
+console.log(alsoGlobal);
+console.log(notGlobal); //Error : private
+*/
+scopeFunction();
+</script>
+</body>
+</html>
